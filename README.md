@@ -310,6 +310,12 @@ driver, but not to use it otherwise. From an elevated command prompt, run
 `bcdedit /set testsigning on` and reboot, then try again. You can turn test
 mode off again afterwards: `bcdedit /set testsigning off`.
 
+* The shell extension doesn't work on Windows XP
+
+Recent versions of MSVC have dropped support for userspace programs on Windows
+XP - only the driver itself works. You might have some success with compiling
+shellbtrfs.dll yourself with mingw.
+
 Changelog
 ---------
 
