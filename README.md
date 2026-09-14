@@ -316,6 +316,14 @@ Recent versions of MSVC have dropped support for userspace programs on Windows
 XP - only the driver itself works. You might have some success with compiling
 shellbtrfs.dll yourself with mingw.
 
+* The driver doesn't load on Windows 11
+
+Recent versions of Windows 11 have added a driver whitelist, but only if you
+have more than 250 hours of cumulative uptime (see https://support.microsoft.com/en-us/windows/hardware/drivers/the-windows-driver-policy).
+
+Make sure you are fully updated, run `CiTool.exe --remove-policy "{8F9CB695-5D48-48D6-A329-7202B44607E3}"`
+from an elevated command prompt, and reboot.
+
 Changelog
 ---------
 
